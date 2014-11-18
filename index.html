@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script src="//simplewebrtc.com/latest.js"></script> 
+    </head>
+    <body>
+        <video height="300" id="localVideo"></video>
+        <div height="300" id="remoteVideo"></div>
+    
+        <script>
+
+    	var webrtc = new SimpleWebRTC({
+  			localVideoEl: 'localVideo',  // the id/element dom element that will hold "our" video
+  			remoteVideosEl: 'remoteVideo', 	// the id/element dom element that will hold remote videos
+ 		 	autoRequestMedia: true, // immediately ask for camera access
+ 		 	url:'http://localhost:8888',  //url of signaling server (Must start signal server to work)
+		 	detectSpeakingEvents: false, //turn off speech detection
+			autoAdjustMic: false //turn off automicadjust
+			});
+
+    	// we have to wait until it's ready
+		webrtc.on('readyToCall', function () {
+  			// you can name it anything
+  			webrtc.joinRoom('TEST');
+			});
+		
+		</script>
+
+    </body>
+</html>
