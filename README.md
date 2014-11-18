@@ -20,9 +20,9 @@ In any case, if you're convinced you need the more advanced configuration of sim
 
 ###1)  Clone/copy this repo to your computer.
 
-###2) Install a signal server:
+###2) Install a signal server.
 
-To get this demo working, you must go to the terminal (with node installed), and make a directory for a signaling server.  CD into that directory and:
+Go to the terminal (with node installed) and make a directory for a signaling server.  CD into that directory and:
 
 ```
 git clone https://github.com/andyet/signalmaster ./
